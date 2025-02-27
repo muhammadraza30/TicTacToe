@@ -23,20 +23,6 @@ class tictactoelogic:
             return True
         return False
 
-    # def get_winner(self):
-    #     winning_combinations = [
-    #         (0, 1, 2), (3, 4, 5), (6, 7, 8),  # Rows
-    #         (0, 3, 6), (1, 4, 7), (2, 5, 8),  # Columns
-    #         (0, 4, 8), (2, 4, 6)  # Diagonals
-    #     ]
-
-    #     for combo in winning_combinations:
-    #         a, b, c = combo
-    #         if self.board[a] == self.board[b] == self.board[c] and self.board[a] != '_':
-    #             return self.board[a], combo  # Return winner and winning cells
-
-    #     return None, None  # No winner
-
     def get_winner(self):
         for combo in [(0, 1, 2), (3, 4, 5), (6, 7, 8),  # Rows
                     (0, 3, 6), (1, 4, 7), (2, 5, 8),  # Columns
@@ -61,13 +47,6 @@ class tictactoelogic:
 
     def normal_ai(self):
         available_moves = [i for i, val in enumerate(self.board) if val == '_']
-
-        # if random.random() < 0.6:  # 60% chance of playing optimally
-        #     _, move = self.easy_ai()
-        #     return move if move is not None else random.choice(available_moves)
-        
-        #  _, best_move = self.alphabeta(self.board, True)
-        # return best_move if best_move is not None else random.choice(available_moves)
         if random.choice([True, False]):
             _, move = self.alphabeta(self.board, True)
             return move if move is not None else random.choice(available_moves)

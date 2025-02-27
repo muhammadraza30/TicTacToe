@@ -358,7 +358,6 @@ class ui_window:
 
         for combo in winning_combinations:
             a, b, c = combo
-            # if self.board[a] == self.board[b] == self.board[c] and self.board[a] != '_':
             if self.logic.board[a] == self.logic.board[b] == self.logic.board[c] and self.logic.board[a] != '_':
                 return self.board[a], combo  # Return winner and winning cells
 
