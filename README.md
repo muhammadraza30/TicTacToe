@@ -24,7 +24,7 @@ To run the game, you need Python installed on your system. Follow these steps:
    ```
 3. Run the script:
    ```sh
-   python tictactoe.py
+   python main.py
    ```
 
 ## How to Play
